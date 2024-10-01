@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Pengadilan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Simulasi Pengadilan</h1>
+        <p>Platform ini dirancang untuk mahasiswa hukum agar bisa berlatih dalam simulasi pengadilan.</p>
+    </header>
+
+    <section id="features">
+        <h2>Fitur Utama</h2>
+        <ul>
+            <li><strong>Kasus Praktek:</strong> Pilih dari berbagai jenis kasus seperti pidana, perdata, atau administrasi.</li>
+            <li><strong>Peran yang Berbeda:</strong> Pilih peran sebagai hakim, jaksa, pengacara, atau saksi dan jalani serangkaian kuis.</li>
+            <li><strong>Penilaian:</strong> Dapatkan penilaian berdasarkan hasil kuis untuk mengevaluasi keterampilan Anda.</li>
+        </ul>
+    </section>
+
+    <section id="case-selection">
+        <h2>Pilih Kasus</h2>
+        <select id="caseType">
+            <option value="pidana">Pidana</option>
+            <option value="perdata">Perdata</option>
+            <option value="administrasi">Administrasi</option>
+        </select>
+        <button onclick="startSimulation()">Mulai Simulasi</button>
+    </section>
+
+    <section id="role-selection" style="display: none;">
+        <h2>Pilih Peran</h2>
+        <select id="roleType">
+            <option value="hakim">Hakim</option>
+            <option value="jaksa">Jaksa</option>
+            <option value="pengacara">Pengacara</option>
+            <option value="saksi">Saksi</option>
+        </select>
+        <button onclick="startQuiz()">Mulai Kuis</button>
+    </section>
+
+    <section id="quiz-section" style="display: none;">
+        <h2>Kuis</h2>
+        <p id="question">Pertanyaan akan muncul di sini.</p>
+        <ul id="answers">
+            <li><button onclick="selectAnswer(1)">Pilihan 1</button></li>
+            <li><button onclick="selectAnswer(2)">Pilihan 2</button></li>
+            <li><button onclick="selectAnswer(3)">Pilihan 3</button></li>
+            <li><button onclick="selectAnswer(4)">Pilihan 4</button></li>
+        </ul>
+        <button onclick="submitQuiz()">Submit Jawaban</button>
+    </section>
+
+    <section id="result-section" style="display: none;">
+        <h2>Hasil</h2>
+        <p id="result">Hasil Anda akan muncul di sini.</p>
+        <button onclick="resetSimulation()">Ulangi Simulasi</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
